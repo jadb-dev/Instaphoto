@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
     mode: process.env.NODE_ENV,
-    entry: "./client/index.js",
+    entry: path.join(__dirname, 'src', 'client', 'index.js'),
     output: {
         filename: "bundle.js",
         path: path.join(__dirname, 'build'),
@@ -10,7 +10,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\jsx?/,
+                test: /\.jsx?/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
@@ -20,8 +20,7 @@ module.exports = {
                 },
             },
             {
-                test: /\css$/,
-                exclude: /node_modules/,
+                test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
             },
         ],
