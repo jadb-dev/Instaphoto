@@ -23,7 +23,7 @@
     "react-google-maps": "^9.4.5",
     "react-map-gl": "^5.0.3",
     "styles-loader": "^1.0.0",
-    "yarn": "^1.16.0"
+    "yarn": "^1.17.3"
   },
   "devDependencies": {
     "@babel/core": "^7.5.0",
